@@ -8,9 +8,9 @@ const HeroSection = () => {
     <>
       <section
         id="home"
-        className="relative overflow-hidden flex items-center py-20 md:py-28 lg:py-12 bg-center bg-no-repeat bg-cover"
+        className="relative overflow-hidden flex items-center py-10 md:py-28 lg:py-12 bg-center bg-no-repeat bg-cover"
       >
-        <div className="w-full max-w-[1440px] px-4 md:px-10 mx-auto">
+        <div className="w-full max-w-[1440px] px-4 md:px-10  mx-auto  ">
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left Content */}
             <div>
@@ -65,7 +65,7 @@ const HeroSection = () => {
             </div>
 
             {/* Right Content */}
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center ">
               <div className="relative z-10">
                 <img
                   src="/home.png"

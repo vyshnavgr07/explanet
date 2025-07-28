@@ -16,8 +16,8 @@ const CourseCardCarousel = () => {
         navigation
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         breakpoints={{
-          320: { slidesPerView: 1.1, spaceBetween: 12 },   
-          480: { slidesPerView: 1.3, spaceBetween: 16 },   // small phones
+          320: { slidesPerView: 1, spaceBetween: 12 },   
+          480: { slidesPerView: 1, spaceBetween: 16 },   // small phones
           640: { slidesPerView: 2, spaceBetween: 20 },     // sm (Tailwind)
           768: { slidesPerView: 2.5, spaceBetween: 24 },   // md (Tailwind)
           1024: { slidesPerView: 3, spaceBetween: 28 },    // lg (Tailwind)
