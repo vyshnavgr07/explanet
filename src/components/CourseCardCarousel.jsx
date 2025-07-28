@@ -17,12 +17,12 @@ const CourseCardCarousel = () => {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 12 },   
-          480: { slidesPerView: 1, spaceBetween: 16 },   // small phones
-          640: { slidesPerView: 2, spaceBetween: 20 },     // sm (Tailwind)
-          768: { slidesPerView: 2.5, spaceBetween: 24 },   // md (Tailwind)
-          1024: { slidesPerView: 3, spaceBetween: 28 },    // lg (Tailwind)
-          1280: { slidesPerView: 3, spaceBetween: 32 },    // xl (Tailwind)
-          1536: { slidesPerView: 3, spaceBetween: 36 },    // 2xl (Tailwind)
+          480: { slidesPerView: 1, spaceBetween: 16 },   
+          640: { slidesPerView: 2, spaceBetween: 20 },     
+          768: { slidesPerView: 2.5, spaceBetween: 24 },   
+          1024: { slidesPerView: 3, spaceBetween: 28 },    
+          1280: { slidesPerView: 3, spaceBetween: 32 },    
+          1536: { slidesPerView: 3, spaceBetween: 36 },   
         }}
         
         className="relative"

@@ -1,7 +1,6 @@
 export const navLinks = [
   {
     label: "Categories",
-    href: "/",
     submenu: [
       { label: "Mechanical", href: "/home-1" },
       { label: "Civil", href: "/home-2" },
@@ -20,10 +19,7 @@ export const navLinks = [
   {
     label: "Labs",
     href: "/courses",
-    submenu: [
-      { label: "All Courses", href: "/courses/all" },
-      { label: "Single Course", href: "/courses/single" }
-    ]
+
   },
 
 ];
