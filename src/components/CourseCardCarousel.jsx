@@ -6,26 +6,32 @@ import "swiper/css/navigation";
 import CourseCard2 from "./CourseCard2"; 
 import { courses } from "../config/courseSection";
 
-
 const CourseCardCarousel = () => {
   return (
     <div className="relative group px-4 py-6 w-full max-w-screen-xl mx-auto">
       <Swiper
         modules={[Navigation, Autoplay]}
-        spaceBetween={16}
+        spaceBetween={20}
         slidesPerView={1.2}
         navigation
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 3 },
+          320: { slidesPerView: 1.1, spaceBetween: 12 },   
+          480: { slidesPerView: 1.3, spaceBetween: 16 },   // small phones
+          640: { slidesPerView: 2, spaceBetween: 20 },     // sm (Tailwind)
+          768: { slidesPerView: 2.5, spaceBetween: 24 },   // md (Tailwind)
+          1024: { slidesPerView: 3, spaceBetween: 28 },    // lg (Tailwind)
+          1280: { slidesPerView: 3, spaceBetween: 32 },    // xl (Tailwind)
+          1536: { slidesPerView: 3, spaceBetween: 36 },    // 2xl (Tailwind)
         }}
+        
         className="relative"
       >
         {courses.map((course) => (
           <SwiperSlide key={course.id}>
-            <CourseCard2 course={course} />
+            <div className="h-full px-2">
+              <CourseCard2 course={course} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

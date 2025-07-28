@@ -19,7 +19,7 @@ const CourseCard2 = ({
   isLiked = false,
 }) => {
   return (
-    <div className="w-full max-w-sm md:w-[400px] md:h-[450px] rounded-xl border shadow-sm bg-white overflow-hidden flex flex-col">
+    <div className="w-full max-w-sm md:w-[400px] md:h-[450px] 2xl:w-[300px]   rounded-xl border shadow-sm bg-white overflow-hidden flex flex-col">
       {/* Top Image */}
       <div className="relative h-60 bg-gradient-to-t from-orange-200 via-yellow-100 to-orange-100">
         <img
