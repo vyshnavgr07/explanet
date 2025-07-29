@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaSearch, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { FaSearch, FaShoppingCart, FaBars, FaTimes, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdArrowDropDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "../config/sidebar";
@@ -9,7 +9,7 @@ import { navLinks } from "../config/sidebar";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpenIndex, setSubmenuOpenIndex] = useState(null);
-
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
   const toggleSubmenu = (index) => {
     setSubmenuOpenIndex(submenuOpenIndex === index ? null : index);
   };
@@ -106,7 +106,8 @@ const Navbar = () => {
       </ul>
 
       {/* Icons */}
-      <div className="hidden md:flex items-center gap-5">
+
+      {/* <div className="hidden md:flex items-center gap-5">
         <FaSearch className="text-gray-600 hover:text-purple-600 cursor-pointer text-lg transition-transform duration-300 hover:scale-110" />
         <div className="bg-purple-600 p-2 rounded-full text-white hover:scale-110 transition-transform duration-300 shadow-md">
           <FaShoppingCart />
@@ -116,6 +117,32 @@ const Navbar = () => {
           alt="profile"
           className="w-10 h-10 rounded-full object-cover border-2 border-purple-500 shadow-sm hover:scale-105 transition-transform duration-300"
         />
+      </div> */} 
+
+<div className="hidden md:flex items-center gap-5">
+        <FaSearch className="text-gray-600 hover:text-purple-600 cursor-pointer text-lg transition-transform duration-300 hover:scale-110" />
+
+        {isLoggedIn ? (
+          <>
+            <div className="bg-purple-600 p-2 rounded-full text-white hover:scale-110 transition-transform duration-300 shadow-md">
+              <FaShoppingCart />
+            </div>
+            <img
+              src="/pro.jpg"
+              alt="profile"
+              className="w-10 h-10 rounded-full object-cover border-2 border-purple-500 shadow-sm hover:scale-105 transition-transform duration-300"
+            />
+          </>
+        ) : (
+          <>
+            <button className="text-sm px-4 py-1.5 rounded-md border border-purple-600 text-purple-600 hover:bg-purple-50 transition">
+              Login
+            </button>
+            <button className="text-sm px-4 py-1.5 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition">
+              Register
+            </button>
+          </>
+        )}
       </div>
 
       {/* Mobile Menu */}
@@ -160,15 +187,42 @@ const Navbar = () => {
               </AnimatePresence>
             </li>
           ))}
+          {isLoggedIn? (
           <div className="flex items-center gap-4 mt-4 border-t pt-4">
-            <FaSearch className="text-gray-600 hover:text-purple-600 cursor-pointer text-lg" />
-            <FaShoppingCart className="text-purple-600 text-lg" />
-            <img
-              src="/pro.jpg"
-              alt="profile"
-              className="w-8 h-8 rounded-full object-cover border-2 border-purple-500"
-            />
+          <FaSearch className="text-gray-600 hover:text-purple-600 cursor-pointer text-lg" />
+          <FaShoppingCart className="text-purple-600 text-lg" />
+          <img
+            src="/pro.jpg"
+            alt="profile"
+            className="w-8 h-8 rounded-full object-cover border-2 border-purple-500"
+          />
+        </div>
+          ):(
+            <div className="flex gap-4 items-center relative">
+            {/* Login Button */}
+            <div className="group relative">
+              <button className="flex items-center gap-2 px-4 py-2 bg-white border border-purple-600 text-purple-600 font-semibold rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300">
+                <FaUser />
+                Login
+              </button>
+              <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs bg-purple-700 text-white px-2 py-1 rounded shadow-md whitespace-nowrap z-10">
+                Click to log in
+              </span>
+            </div>
+      
+            {/* Register Button */}
+            <div className="group relative">
+              <button className="flex items-center gap-2 px-4 py-2 bg-white border border-purple-600 text-purple-600 font-semibold rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300">
+                <FaUserPlus />
+                Register
+              </button>
+              <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs bg-purple-700 text-white px-2 py-1 rounded shadow-md whitespace-nowrap z-10">
+                Create an account
+              </span>
+            </div>
           </div>
+          )}
+
         </motion.ul>
       )}
     </motion.nav>

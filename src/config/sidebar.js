@@ -11,10 +11,6 @@ export const navLinks = [
   {
     label: "Courses",
     href: "/courses",
-    submenu: [
-      { label: "All Courses", href: "/courses/all" },
-      { label: "Single Course", href: "/courses/single" }
-    ]
   },
   {
     label: "Labs",

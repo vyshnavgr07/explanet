@@ -17,13 +17,14 @@ const HeroSection = () => {
               <h1 className="font-semibold leading-normal tracking-wide text-4xl mb-5">
                 Join the{" "}
                 <span className="relative inline-block">
-                  <span className="before:block before:absolute before:-inset-2 before:-skew-y-6 before:bg-gradient-to-tl before:from-violet-600 before:to-text-Primary relative inline-block">
-                    <span className="relative text-white font-bold">
+                  <span className="before:block before:absolute mb-2 before:-inset-2 before:-skew-y-6 before:bg-gradient-to-tl before:from-violet-600 before:to-text-Primary relative inline-block">
+                    <span className="relative text-white font-bold ">
                       Revolution
                     </span>
                   </span>
                 </span>{" "}
-                in <br /> Experiential <span className="font-bold">Learning</span>
+                
+                in <br /> Experiential <span className="font-bold ">Learning</span>
               </h1>
 
               <div className="grid sm:grid-cols-2 gap-6 text-slate-600 py-8">
