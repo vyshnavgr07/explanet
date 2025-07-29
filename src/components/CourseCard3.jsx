@@ -1,12 +1,17 @@
 import React from "react";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const CourseCard3 = () => {
   return (
-    <div className="w-[300px] bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+    <motion.div
+      whileHover={{ scale: 1.02, y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="w-[300px] bg-white rounded-xl shadow-md overflow-hidden border border-gray-100"
+    >
       {/* Image */}
       <img
-        src="/dd1.png" // Make sure the image is in the public folder or import it
+        src="/dd1.png"
         alt="Course"
         className="w-full h-44 object-cover"
       />
@@ -59,7 +64,7 @@ const CourseCard3 = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
